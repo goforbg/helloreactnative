@@ -1,47 +1,76 @@
-import React from 'react';
-import { View, StyleSheet, TouchableOpacity, Button } from 'react-native';
- 
+import React from "react";
+import { View, StyleSheet, TouchableOpacity, Button } from "react-native";
 
-const HomeScreen = ({navigation}) => {
-    return (
-        <View style = {styles.container}>
-            <View style = {styles.button}>
-                <Button title="Click me for Components Screen" onPress = {() => {navigation.navigate('Components')}}/>
-            </View>
-            <View style = {styles.button}>
-                <Button title="Click me for List Screen" onPress = {() => {navigation.navigate('List')}}/>
-            </View>
-            <View style = {styles.button}>
-                <Button title="Click me for Image Screen" onPress = {() => {navigation.navigate('ImageScreen')}}/>
-            </View>
-            <View style = {styles.button}>
-                <Button title="Click me for Counter Screen" onPress = {() => {navigation.navigate('CounterScreen')}}/>
-            </View>
-            <View style = {styles.button}>
-                <Button title="Click me for Colors Screen" onPress = {() => {navigation.navigate('ColorsScreen')}}/>
-            </View>
-        </View>
-    );
-}
-
+const HomeScreen = ({ navigation }) => {
+  return (
+    <View style={styles.container}>
+      <View style={styles.button}>
+        <Button
+          title="Click me for Components Screen"
+          onPress={() => {
+            navigation.navigate("Components");
+          }}
+        />
+      </View>
+      <View style={styles.button}>
+        <Button
+          title="Click me for List Screen"
+          onPress={() => {
+            navigation.navigate("List");
+          }}
+        />
+      </View>
+      <View style={styles.button}>
+        <Button
+          title="Click me for Image Screen"
+          onPress={() => {
+            navigation.navigate("ImageScreen");
+          }}
+        />
+      </View>
+      <View style={styles.button}>
+        <Button
+          title="Click me for Counter Screen"
+          onPress={() => {
+            navigation.navigate("CounterScreen");
+          }}
+        />
+      </View>
+      <View style={styles.button}>
+        <Button
+          title="Click me for Colors Screen"
+          onPress={() => {
+            navigation.navigate("ColorsScreen");
+          }}
+        />
+      </View>
+      <View style={styles.button}>
+        <Button
+          title="Click me for SquareScreen"
+          onPress={() => {
+            navigation.navigate("SquareScreen");
+          }}
+        />
+      </View>
+    </View>
+  );
+};
 
 export const styles = StyleSheet.create({
+  button: {
+    marginBottom: 10,
+  },
 
-    button : {
-        marginBottom: 10
-    },
+  container: {
+    flex: 1,
+    flexDirection: "column",
+    marginBottom: 10,
+  },
 
-    container: {
-        flex: 1,
-        flexDirection: 'column',
-        marginBottom: 10
-        },      
-
-    titleTextStyle: {
-        fontSize: 50,
-        textAlign: "center"
-    }
-    
+  titleTextStyle: {
+    fontSize: 50,
+    textAlign: "center",
+  },
 });
 
 export default HomeScreen;
