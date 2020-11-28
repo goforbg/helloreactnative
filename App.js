@@ -5,7 +5,7 @@ import CounterScreen from './screens/counterscreen';
 import HomeScreen from './screens/homescreen';
 import ImageScreen from './screens/imagescreen';
 import ListScreen from './screens/listscreen';
-
+import ColorsScreen from './screens/colorsscreen';
 
 const navigator = createStackNavigator(
   {
@@ -13,7 +13,8 @@ const navigator = createStackNavigator(
     List: ListScreen,
     Components: ComponentsScreen,
     ImageScreen: ImageScreen,
-    CounterScreen: CounterScreen
+    CounterScreen: CounterScreen,
+    ColorsScreen: ColorsScreen,
   },
   {
     initialRouteName: "Home",
