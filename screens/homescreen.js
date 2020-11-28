@@ -14,12 +14,15 @@ const HomeScreen = ({navigation}) => {
             <View style = {styles.button}>
                 <Button title="Click me for Image Screen" onPress = {() => {navigation.navigate('ImageScreen')}}/>
             </View>
+            <View style = {styles.button}>
+                <Button title="Click me for Counter Screen" onPress = {() => {navigation.navigate('CounterScreen')}}/>
+            </View>
         </View>
     );
 }
 
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
 
     button : {
         marginBottom: 10
@@ -32,7 +35,8 @@ const styles = StyleSheet.create({
         },      
 
     titleTextStyle: {
-        fontSize: 50
+        fontSize: 50,
+        textAlign: "center"
     }
     
 });
