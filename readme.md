@@ -1,0 +1,1 @@
+Not sure why you're in this place of github, this is just a newb trying to learn javascript and react-native because he feels left out.
