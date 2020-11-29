@@ -60,6 +60,14 @@ const HomeScreen = ({ navigation }) => {
           }}
         />
       </View>
+      <View style={styles.button}>
+        <Button
+          title="Click me for TextInputScreen"
+          onPress={() => {
+            navigation.navigate("TextInputScreen");
+          }}
+        />
+      </View>
     </View>
   );
 };
