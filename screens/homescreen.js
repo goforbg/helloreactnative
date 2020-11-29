@@ -52,6 +52,14 @@ const HomeScreen = ({ navigation }) => {
           }}
         />
       </View>
+      <View style={styles.button}>
+        <Button
+          title="Click me for SquareScreen With Reducer"
+          onPress={() => {
+            navigation.navigate("SquareScreenReducer");
+          }}
+        />
+      </View>
     </View>
   );
 };
