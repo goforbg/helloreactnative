@@ -68,6 +68,14 @@ const HomeScreen = ({ navigation }) => {
           }}
         />
       </View>
+      <View style={styles.button}>
+        <Button
+          title="Click me for BoxScreen"
+          onPress={() => {
+            navigation.navigate("BoxScreen");
+          }}
+        />
+      </View>
     </View>
   );
 };
