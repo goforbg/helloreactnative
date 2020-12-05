@@ -13,28 +13,29 @@ const BoxScreen = (props) => {
 
 const boxstyles = StyleSheet.create({
   viewStyle: {
-    borderWidth: 3,
-    borderColor: "black",
     height: 200,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    borderWidth: 3,
   },
 
   textStyleOne: {
-    borderWidth: 3,
-    borderColor: "red",
+    height: 100,
+    width: 100,
+    backgroundColor: "blue",
   },
 
   textStyleTwo: {
-    borderWidth: 3,
-    borderColor: "red",
-    fontSize: 18,
-    position: "absolute",
-    backgroundColor: "red",
-    ...StyleSheet.absoluteFillObject,
+    height: 100,
+    width: 100,
+    backgroundColor: "green",
+    marginTop: 20,
   },
 
   textStyleThree: {
-    borderWidth: 3,
-    borderColor: "red",
+    height: 100,
+    width: 100,
+    backgroundColor: "red",
   },
 });
 export default BoxScreen;
