@@ -10,6 +10,7 @@ import SquareScreen from "./screens/SquareScreen";
 import SquareScreenReducer from "./screens/SquareScreenReducer";
 import TextInputScreen from "./screens/textinputscreen";
 import BoxScreen from "./screens/boxscreen";
+import RickAndMortyScreen from "./screens/rickandmortyscreen";
 
 const navigator = createStackNavigator(
   {
@@ -22,7 +23,8 @@ const navigator = createStackNavigator(
     SquareScreen: SquareScreen,
     SquareScreenReducer: SquareScreenReducer,
     TextInputScreen: TextInputScreen,
-    BoxScreen : BoxScreen
+    BoxScreen: BoxScreen,
+    RickAndMortyScreen: RickAndMortyScreen,
   },
   {
     initialRouteName: "Home",

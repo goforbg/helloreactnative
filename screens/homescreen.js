@@ -76,6 +76,14 @@ const HomeScreen = ({ navigation }) => {
           }}
         />
       </View>
+      <View style={styles.button}>
+        <Button
+          title="Click me for Rick And Morty App"
+          onPress={() => {
+            navigation.navigate("RickAndMortyScreen");
+          }}
+        />
+      </View>
     </View>
   );
 };
