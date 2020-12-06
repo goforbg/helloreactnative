@@ -3,15 +3,18 @@ import { View, Image, StyleSheet, Text, Platform } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import { TextInput } from "react-native-gesture-handler";
 
-const SearchBar = ({ searchTerm, onTermChange }) => {
+const SearchBar = ({ searchTerm, onTermChange, onTermSubmit }) => {
   return (
     <View style={styles.backgroundStyle}>
       <Feather name="search" style={styles.searchIconStyle} />
       <TextInput
+        autoCapitalize="none"
+        autoCorrect={false}
         style={styles.inputStyle}
         placeholder="Search"
         value={searchTerm}
         onChangeText={(newTerm) => onTermChange(newTerm)}
+        onEndEditing={onTermSubmit}
       />
     </View>
   );
@@ -39,4 +42,5 @@ const styles = StyleSheet.create({
     marginHorizontal: 15,
   },
 });
+
 export default SearchBar;

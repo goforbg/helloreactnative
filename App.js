@@ -11,6 +11,8 @@ import SquareScreenReducer from "./screens/SquareScreenReducer";
 import TextInputScreen from "./screens/textinputscreen";
 import BoxScreen from "./screens/boxscreen";
 import RickAndMortyScreen from "./screens/rickandmortyscreen";
+let debug = require("debug");
+debug.enable("axios");
 
 const navigator = createStackNavigator(
   {
