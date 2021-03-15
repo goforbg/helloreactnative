@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import SearchBar from "../components/searchbar";
 import { useState } from "react";
 import useRickAndMortyResults from "../hook/useRickAndMortyResults";
@@ -10,13 +10,13 @@ const RickAndMortyScreen = (props) => {
   const [searchApi, errorMessage, results] = useRickAndMortyResults();
 
   const filterResults = (gender) => {
-    return results.filter(result => {
-      return result.gender.includes(gender) 
-    })
-  }
+    return results.filter((result) => {
+      return result.gender.includes(gender);
+    });
+  };
 
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <SearchBar
         searchTerm={searchTerm}
         onTermChange={(newTerm) => setSearchTerm(newTerm)}
@@ -26,11 +26,19 @@ const RickAndMortyScreen = (props) => {
       {errorMessage.length > 1 ? (
         <Text>Don't be a Jerry! </Text>
       ) : (
-        <Text>We found {results.length}</Text>
+        <Text style={{ marginLeft: 10 }}>We found {results.length}</Text>
       )}
-      <ResultsList title="Male Characters" results={filterResults("Male")} />
-      <ResultsList title="Female Characters" results={filterResults("Female")} />
-      <ResultsList title="Alien Characters" results={filterResults("unknown")} />
+      <ScrollView>
+        <ResultsList title="Male Characters" results={filterResults("Male")} />
+        <ResultsList
+          title="Female Characters"
+          results={filterResults("Female")}
+        />
+        <ResultsList
+          title="Alien Characters"
+          results={filterResults("unknown")}
+        />
+      </ScrollView>
     </View>
   );
 };

@@ -4,10 +4,9 @@ import ResultDetail from "./ResultDetail";
 
 const ResultsList = ({ title, results }) => {
   return (
-    <View style={styles.container}>
+    <View>
       <Text style={styles.titleStyle}>{title}</Text>
       <FlatList
-        scrollEnabled={false}
         horizontal
         data={results}
         keyExtractor={(result) => result.id}
@@ -20,10 +19,8 @@ const ResultsList = ({ title, results }) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    padding: 5,
-  },
   titleStyle: {
+    margin: 10,
     fontSize: 18,
     fontWeight: "bold",
   },

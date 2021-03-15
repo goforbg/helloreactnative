@@ -6,14 +6,16 @@ const ResultDetail = ({ result }) => {
     <View style={styles.container}>
       <Image style={styles.image} source={{ uri: result.image }} />
       <Text style={styles.name}>{result.name}</Text>
-      <Text style={styles.desc}>{result.species} from {result.origin.name}</Text>
+      <Text style={styles.desc}>
+        {result.species} from {result.origin.name}
+      </Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    padding: 5,
+    margin: 10,
   },
   image: {
     width: 250,
