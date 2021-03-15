@@ -16,17 +16,15 @@ const RickAndMortyScreen = (props) => {
   };
 
   return (
-    <View style={{ flex: 1 }}>
+    <>
       <SearchBar
         searchTerm={searchTerm}
         onTermChange={(newTerm) => setSearchTerm(newTerm)}
         onTermSubmit={() => searchApi(searchTerm)}
       />
 
-      {errorMessage.length > 1 ? (
+      {errorMessage.length > 1 && (
         <Text>Don't be a Jerry! </Text>
-      ) : (
-        <Text style={{ marginLeft: 10 }}>We found {results.length}</Text>
       )}
       <ScrollView>
         <ResultsList title="Male Characters" results={filterResults("Male")} />
@@ -39,7 +37,7 @@ const RickAndMortyScreen = (props) => {
           results={filterResults("unknown")}
         />
       </ScrollView>
-    </View>
+    </>
   );
 };
 
