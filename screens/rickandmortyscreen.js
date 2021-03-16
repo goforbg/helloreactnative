@@ -5,7 +5,7 @@ import { useState } from "react";
 import useRickAndMortyResults from "../hook/useRickAndMortyResults";
 import ResultsList from "../components/ResultsList";
 
-const RickAndMortyScreen = (props) => {
+const RickAndMortyScreen = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchApi, errorMessage, results] = useRickAndMortyResults();
 
@@ -23,11 +23,12 @@ const RickAndMortyScreen = (props) => {
         onTermSubmit={() => searchApi(searchTerm)}
       />
 
-      {errorMessage.length > 1 && (
-        <Text>Don't be a Jerry! </Text>
-      )}
+      {errorMessage.length > 1 && <Text>Don't be a Jerry! </Text>}
       <ScrollView>
-        <ResultsList title="Male Characters" results={filterResults("Male")} />
+        <ResultsList
+          title="Male Characters"
+          results={filterResults("Male")}
+        />
         <ResultsList
           title="Female Characters"
           results={filterResults("Female")}

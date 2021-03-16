@@ -11,6 +11,7 @@ import SquareScreenReducer from "./screens/SquareScreenReducer";
 import TextInputScreen from "./screens/textinputscreen";
 import BoxScreen from "./screens/boxscreen";
 import RickAndMortyScreen from "./screens/rickandmortyscreen";
+import ResultShowScreen from "./components/ResultShowScreen";
 let debug = require("debug");
 debug.enable("axios");
 
@@ -27,6 +28,7 @@ const navigator = createStackNavigator(
     TextInputScreen: TextInputScreen,
     BoxScreen: BoxScreen,
     RickAndMortyScreen: RickAndMortyScreen,
+    ResultShowScreen: ResultShowScreen,
   },
   {
     initialRouteName: "Home",
