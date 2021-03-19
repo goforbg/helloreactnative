@@ -12,7 +12,7 @@ const HomeScreen = ({ navigation }) => {
           }}
         />
       </View>
-      <View style={styles.button}>
+      {/* <View style={styles.button}>
         <Button
           title="Click me for List Screen"
           onPress={() => {
@@ -75,12 +75,20 @@ const HomeScreen = ({ navigation }) => {
             navigation.navigate("BoxScreen");
           }}
         />
-      </View>
+      </View> */}
       <View style={styles.button}>
         <Button
           title="Click me for Rick And Morty App"
           onPress={() => {
             navigation.navigate("RickAndMortyScreen");
+          }}
+        />
+      </View>
+      <View style={styles.button}>
+        <Button
+          title="Click me for Blog Index Screen"
+          onPress={() => {
+            navigation.navigate("BlogIndexScreen");
           }}
         />
       </View>
