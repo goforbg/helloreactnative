@@ -15,7 +15,7 @@ import ResultShowScreen from "./components/ResultShowScreen";
 let debug = require("debug");
 debug.enable("axios");
 import React from "react";
-import { AppProvider } from "./context/AppContext";
+import { Provider } from "./context/AppContext";
 import BlogIndexScreen from "./screens/BlogIndexScreen";
 
 const navigator = createStackNavigator(
@@ -46,8 +46,8 @@ const App = createAppContainer(navigator);
 
 export default () => {
   return (
-    <AppProvider>
+    <Provider>
       <App />
-    </AppProvider>
+    </Provider>
   );
 };
