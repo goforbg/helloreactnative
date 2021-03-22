@@ -17,6 +17,7 @@ debug.enable("axios");
 import React from "react";
 import { Provider } from "./context/AppContext";
 import BlogIndexScreen from "./screens/BlogIndexScreen";
+import BlogDetailScreen from "./screens/BlogDetailScreen";
 
 const navigator = createStackNavigator(
   {
@@ -33,6 +34,7 @@ const navigator = createStackNavigator(
     RickAndMortyScreen: RickAndMortyScreen,
     ResultShowScreen: ResultShowScreen,
     BlogIndexScreen: BlogIndexScreen,
+    BlogDetailScreen: BlogDetailScreen,
   },
   {
     initialRouteName: "Home",
