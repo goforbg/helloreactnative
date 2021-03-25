@@ -32,7 +32,7 @@ const BlogIndexScreen = (props) => {
               <View style={styles.container}>
                 <Text style={styles.title}>
                   {item.title} - {item.id}
-                </Text>{" "}
+                </Text>
                 <TouchableOpacity onPress={() => deleteBlogPost(item.id)}>
                   <Feather style={styles.delete} name="trash" />
                 </TouchableOpacity>
