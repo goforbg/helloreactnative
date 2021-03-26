@@ -60,4 +60,16 @@ const styles = StyleSheet.create({
   },
 });
 
+BlogIndexScreen.navigationOptions = ({ navigation }) => {
+  return {
+    headerRight: (
+      <TouchableOpacity
+        onPress={() => navigation.navigate("CreateBlogPostScreen")}
+      >
+        <Feather name="plus" size={30} />
+      </TouchableOpacity>
+    ),
+  };
+};
+
 export default BlogIndexScreen;

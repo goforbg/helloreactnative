@@ -18,6 +18,7 @@ import React from "react";
 import { Provider } from "./context/AppContext";
 import BlogIndexScreen from "./screens/BlogIndexScreen";
 import BlogDetailScreen from "./screens/BlogDetailScreen";
+import CreateBlogPostScreen from "./screens/CreateBlogPostScreen"
 
 const navigator = createStackNavigator(
   {
@@ -35,6 +36,7 @@ const navigator = createStackNavigator(
     ResultShowScreen: ResultShowScreen,
     BlogIndexScreen: BlogIndexScreen,
     BlogDetailScreen: BlogDetailScreen,
+    CreateBlogPostScreen, CreateBlogPostScreen
   },
   {
     initialRouteName: "Home",
